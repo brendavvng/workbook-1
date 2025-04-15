@@ -90,6 +90,7 @@ public class RentalCarCalculator {
 
         double totalCost = baseCost + optionsCost + surcharge;
 
+        
         // results
         System.out.println("\n--- Rental Summary ---");
         System.out.println("Pickup Date: " + pickupDate);
