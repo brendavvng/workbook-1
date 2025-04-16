@@ -10,8 +10,8 @@ public class RentalCarCalculator {
         Scanner myScanner = new Scanner(System.in);
 
         //final variables that will not change in the code
-        final double BasicCarRental = 29.99;
-        final double TolltagRate = 3.95;
+        final double basicCarRental = 29.99;
+        final double tollTagRate = 3.95;
         final double gpsRate = 2.95;
         final double roadsideAssist = 3.95;
         final double Surcharge = 0.30; // 30% charge for drivers under 25
@@ -34,7 +34,7 @@ public class RentalCarCalculator {
         String tollTag = myScanner.nextLine();
         switch (tollTag.toLowerCase()) {
             case "yes":
-                optionsCost += TolltagRate * rentalDays;
+                optionsCost += tollTagRate * rentalDays;
                 break;
             case "no":
                 break;
@@ -81,7 +81,7 @@ public class RentalCarCalculator {
         System.out.print("Please enter your age (30% surcharge for people under 25): ");
         int age = myScanner.nextInt();
 
-        double baseCost = BasicCarRental * rentalDays;
+        double baseCost = basicCarRental * rentalDays;
         double surcharge = 0;
 
         if (age < 25) {
@@ -90,7 +90,7 @@ public class RentalCarCalculator {
 
         double totalCost = baseCost + optionsCost + surcharge;
 
-        
+
         // results
         System.out.println("\n--- Rental Summary ---");
         System.out.println("Pickup Date: " + pickupDate);
